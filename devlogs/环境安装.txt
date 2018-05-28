@@ -1,0 +1,59 @@
+1.安装nodejs并切换淘宝源
+	npm config set registry https://registry.npm.taobao.org
+	
+	配置后可通过下面方式来验证是否成功 
+	npm config get registry
+	或 
+	npm info express
+	
+2.nodejs 设置全局仓库地址
+	npm config set prefix “XXX\nodejs\node_global” 
+	npm config set cache “XXX\nodejs\node_cache”
+		
+	Windows下的Nodejs npm路径是appdata，很不爽，想改回来，但是在cmd下执行以下命令也无效
+
+		npm config set cache "D:\nodejs\node_cache"
+
+		npm config set prefix "D:\nodejs\node_global"
+
+		最后在nodejs的安装目录中找到node_modules\npm\.npmrc文件
+
+		修改如下即可：
+
+		prefix = D:\nodejs\node_global
+		cache = D:\nodejs\node_global	
+		
+3.查看当前配置
+	npm config ls		
+	
+4.初始化reactapp
+		npm install -g create-react-app
+		
+		create-react-app confcenter-fe
+		cd confcenter-fe  
+		
+		初始化以后安装了 react react-dom react-scripts
+		
+5.初始化使用
+		Success! Created confcenter-fe at D:\gitrepo\Frontend\demo\confcenter-fe
+		Inside that directory, you can run several commands:
+
+		  npm start
+			Starts the development server.
+
+		  npm run build
+			Bundles the app into static files for production.
+
+		  npm test
+			Starts the test runner.
+
+		  npm run eject
+			Removes this tool and copies build dependencies, configuration files
+			and scripts into the app directory. If you do this, you can’t go back!
+
+		We suggest that you begin by typing:
+
+		  cd confcenter-fe
+		  npm start
+
+		Happy hacking!
