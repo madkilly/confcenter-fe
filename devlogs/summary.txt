@@ -1,0 +1,6 @@
+### Tech Stack
+1.UI库：React & React-Dom(16.2.0)
+2.JS：ES6、ES7
+3.样式：less
+4.代码校验: Eslint
+打包构建：Babel Webpack(4.x)

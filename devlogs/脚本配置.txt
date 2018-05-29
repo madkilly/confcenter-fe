@@ -1,0 +1,4 @@
+1.将react-scripts start build 拿出来作为初始化脚本
+    并将package.json 的启动命令更改为修改过以后的脚本
+2.config目录 来自reactjs库
+    用来和script脚本配套最为环境变量配置

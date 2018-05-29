@@ -1,0 +1,42 @@
+babel配置
+    {
+      "plugins": ["transform-es2015-arrow-functions"]，
+      "presets": ["es2015"]
+    }
+
+    babel-preset-es2015: 可以将es2015即es6的js代码编译为es5
+
+    babel-preset-es2016: 可以将es2016即es7的js代码编译为es6
+
+    babel-preset-es2017: 可以将es2017即es8的js代码编译为es7
+
+    babel-preset-stage-x: 可以将处于某一阶段的js语法编译为正式版本的js代码
+
+    stage-X: 指处于某一阶段的js语言提案。
+
+    提案共分为五个阶段：
+    stage-0: 稻草人-只是一个大胆的想法
+    stage-1: 提案-初步尝试
+    stage-2: 初稿-完成初步规范
+    stage-3: 候选-完成规范和浏览器初步实现
+    stage-4: 完成-将被添加到下一年发布
+
+
+当前 babel 推荐使用 babel-preset-env 替代 babel-preset-es2015 和 babel-preset-es2016 以及 babel-preset-es2017 ,env的支持范围更广，包含es2015 es2016 es2017的所有语法编译，并且它可以根据项目运行平台的支持情况自行选择编译版本。
+使用方法： '.babelrc' 中 'es2015' 改为 'env'
+.babelrc
+
+{
+  "presets": ["env", "stage-2"]
+}
+
+
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-2"
+  ]
+}
+
+react 转义react语法

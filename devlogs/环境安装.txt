@@ -1,40 +1,40 @@
-1.��װnodejs���л��Ա�Դ
+﻿1.安装nodejs并切换淘宝源
 	npm config set registry https://registry.npm.taobao.org
 	
-	���ú��ͨ�����淽ʽ����֤�Ƿ�ɹ� 
+	配置后可通过下面方式来验证是否成功 
 	npm config get registry
-	�� 
+	或 
 	npm info express
 	
-2.nodejs ����ȫ�ֲֿ��ַ
-	npm config set prefix ��XXX\nodejs\node_global�� 
-	npm config set cache ��XXX\nodejs\node_cache��
+2.nodejs 设置全局仓库地址
+	npm config set prefix “XXX\nodejs\node_global” 
+	npm config set cache “XXX\nodejs\node_cache”
 		
-	Windows�µ�Nodejs npm·����appdata���ܲ�ˬ����Ļ�����������cmd��ִ����������Ҳ��Ч
+	Windows下的Nodejs npm路径是appdata，很不爽，想改回来，但是在cmd下执行以下命令也无效
 
 		npm config set cache "D:\nodejs\node_cache"
 
 		npm config set prefix "D:\nodejs\node_global"
 
-		�����nodejs�İ�װĿ¼���ҵ�node_modules\npm\.npmrc�ļ�
+		最后在nodejs的安装目录中找到node_modules\npm\.npmrc文件
 
-		�޸����¼��ɣ�
+		修改如下即可：
 
 		prefix = D:\nodejs\node_global
 		cache = D:\nodejs\node_global	
 		
-3.�鿴��ǰ����
+3.查看当前配置
 	npm config ls		
 	
-4.��ʼ��reactapp
+4.初始化reactapp
 		npm install -g create-react-app
 		
 		create-react-app confcenter-fe
 		cd confcenter-fe  
 		
-		��ʼ���Ժ�װ�� react react-dom react-scripts
+		初始化以后安装了 react react-dom react-scripts
 		
-5.��ʼ��ʹ��
+5.初始化使用
 		Success! Created confcenter-fe at D:\gitrepo\Frontend\demo\confcenter-fe
 		Inside that directory, you can run several commands:
 
@@ -49,7 +49,7 @@
 
 		  npm run eject
 			Removes this tool and copies build dependencies, configuration files
-			and scripts into the app directory. If you do this, you can��t go back!
+			and scripts into the app directory. If you do this, you can’t go back!
 
 		We suggest that you begin by typing:
 
@@ -57,3 +57,14 @@
 		  npm start
 
 		Happy hacking!
+
+
+6.环境增强安装
+    安装babel 用来支持jsx 和es6标准
+    npm install --save-dev babel-cli babel-preset-env
+    另外加入babel资源文件babelrc babel介绍见babel配置
+
+7.Eject出配置
+npm run eject
+运行后，package.js会被更新，工程下会多出config目录，其中有webpack有两个配置文件，分别对应开发和生产环境（/config/webpack.config.dev.js和/config/webpack.config.prod.js）。这两个配置文件都要修改，但略有不同，下面以dev为例说明：
+详细见react入口点配置
