@@ -68,3 +68,11 @@
 npm run eject
 运行后，package.js会被更新，工程下会多出config目录，其中有webpack有两个配置文件，分别对应开发和生产环境（/config/webpack.config.dev.js和/config/webpack.config.prod.js）。这两个配置文件都要修改，但略有不同，下面以dev为例说明：
 详细见react入口点配置
+
+8.找到了html入口点
+    配置文件webpack.config.dev.js 中
+           new HtmlWebpackPlugin({
+             inject: true,
+             template: paths.appHtml,
+           }),
+    paths.appHtml 配置了react的html内容
